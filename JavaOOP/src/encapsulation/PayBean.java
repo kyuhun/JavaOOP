@@ -6,10 +6,15 @@ public class PayBean {
 	//name salary tax money
 	private String name; // 멤버필드 변수는 초기화를 하지않는다.
 	private int salary;
-	private int tax;
-	private int money;
+	
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getSalary() {
+		return salary;
 	}
 	public void setSalary(int salary) {
 		this.salary = salary;
