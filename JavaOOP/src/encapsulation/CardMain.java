@@ -17,24 +17,23 @@ public class CardMain {
 		 
 		 * */
 		
-		String  name1 = "", name2 ="";
-		int num1 =0, num2=0;
+		
+	
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("이름을 입력하세요");
-		name1 = scanner.next();
-	
+		CardBean3 hong = new CardBean3(scanner.next());
 		System.out.println("이름을 입력하세요");
-		name2 = scanner.next();
-		
+		CardBean3 kim = new  CardBean3(scanner.next());
 		
 		// 객체를 생성함
 		// 인터넷을 망을 타고 데이터값이 게임회사 들어옴
-		CardBean3 hong = new CardBean3(name1);
-		CardBean3 kim = new  CardBean3(name2);
+		
+		
 		CardGame game = new CardGame(hong,kim);
-		System.out.println(hong.getName1()+":"+ hong.getNum2());
-		System.out.println(kim.getName1()+":"+kim.getNum2());
+		
+		
 		// 사용자가 결과화면을 보는 중.. 
-		System.out.println(game.getWinner());
+		
+		System.out.println(game.toString());
 	}
 }

@@ -33,6 +33,7 @@ public class CardMain2 {
 		// 스캐너가 받아 놓은 값은 현재 지변에 있다.
 		// 그런데 연산로직은 객체에 있다.
 		// 따라서, 지변에 있는 값을 멤변에 던져야 한다.
+		CardGame game = new CardGame();
 		cardBean.setName1(name1);
 		cardBean.setNum1(num1); // 스캐너로 받지 않는다고 
 							// setNum()를 호출(사용)하지 않으면
@@ -40,8 +41,8 @@ public class CardMain2 {
 		cardBean.setName2(name2);
 		cardBean.setNum2(num2);
 		
-
-		System.out.println(cardBean.toString());
+		
+		System.out.println(game.toString());
 		
 	}
 }
