@@ -39,7 +39,7 @@ public class BankBook implements Accunt{
 	// BankBook.bank --> 클래스변수 호출하는 모양
 	// 위치: 필드---> (인변,상수,클래스변수) < 멤변
 	/*===== 필드 ===== */
-	private static  String BANK;
+	public static  String BANK;
 	private int bankbookNo;
 	private String name;
 	private int money,pass;

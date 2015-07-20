@@ -15,7 +15,6 @@ public class BankMain {
 			  	않으면 아예 생성을 막는 기능 ==> 제약, 방어코딩*/
 			System.out.println("이름 입력:");
 			BankBook bankBook = new BankBook(scanner.next());		
-			
 			System.out.println("입금:");
 			bankBook.deposit(scanner.nextInt());
 			System.out.println("출금:");
