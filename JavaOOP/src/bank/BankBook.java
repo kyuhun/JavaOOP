@@ -1,12 +1,13 @@
 package bank;
 
-public class BankBook implements Account{
+public class BankBook {
 
 	public static  String BANK;
 	private int bankbookNo;
 	private String name;
-	private int money,pass;
-	private String msg; // 유효성 체크 결과를 알려줘서 고객이 만약
+	private int money,pass,count;
+	private String msg; 
+	// 유효성 체크 결과를 알려줘서 고객이 만약
 						// 실수로 그렇게 입력햇다면 공지해주는 기능
 	public BankBook(String name) {
 			this.BANK=  "아이티 뱅크";
@@ -15,12 +16,9 @@ public class BankBook implements Account{
 			this.name =name;
 			
 	}							
+	
 		// 개발자는 setter 를 쓸지, 생성자로 끝낼지 고민
-	    // getter, setter 단축키 : ALT + SHIFT + S
-	      // 4줄을 한꺼번에 주석 단축키 : CTRL + SHIFT + /
-	/*====== 멤버메소드  ======*/
-	@Override
-	public String toString() {
+	    public String showAccount() {
 		String str = "";
 		str =  " ============== \n"+
                  "    ["+BANK+"]   \n"+
@@ -30,27 +28,12 @@ public class BankBook implements Account{
                   " ==============";
 		return str;
 	}
-	public int getPass() {
-		return pass;
-	}
-	public int getBankbookNo() {
-		return bankbookNo;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public int getMoney() {
-		return money;
-	}
-
 	
-	public void setPass(int pass) {
+		public void setPass(int pass) {
 		this.pass = pass;
 	}
 	
-	@Override
+	
 	public void withdraw(int money) {
 		// 파라미터 값이 정상값이 아닌 상태를 
 		// 추적해서 필터링하는 로직이 필요해짐.
@@ -65,7 +48,34 @@ public class BankBook implements Account{
 		}
 		
 	}
-	@Override
+	
+	public int getBankbookNo() {
+		return bankbookNo;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public int getPass() {
+		return pass;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setBankbookNo(int bankbookNo) {
+		this.bankbookNo = bankbookNo;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
 	public void deposit(int money) {
 		if (money<=0) {
 			this.msg = "출금액은 0보다 커야 합니다.";
@@ -74,5 +84,10 @@ public class BankBook implements Account{
 		}
 		
 	}
-	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 }
